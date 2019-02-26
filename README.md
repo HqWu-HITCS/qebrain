@@ -3,7 +3,7 @@
 This repository provides an unofficial released implementation of paper ["Bilingual Expert" Can Find Translation Errors](https://arxiv.org/abs/1807.09433). Since the implementation details, data preprocessing, and other possibilities, it is not guaranteed to reproduce the results in [WMT 2018 QE task](http://www.statmt.org/wmt18/quality-estimation-task.html#results).
 
 ## Requirements
-1. TensorFlow 1.12 `pip install tensorflow-gpu`
+1. TensorFlow 1.12 `pip install tensorflow-gpu` (Noted that it should be run under CUDA9.0 and cudnn7.3.1 )
 2. OpenNMT-tf 1.15 `pip install OpenNMT-tf`
 We used the following OpenNMT-tf APIs, so the latest OpenNMT-tf may also work if they are not changed. OpenNMT-tf also claimed backward compatibility guarantees.
     * `encoders.self_attention_encoder.SelfAttentionEncoder`
