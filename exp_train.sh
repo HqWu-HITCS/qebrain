@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export CUDA_VISIBLE_DEVICES=0,1
 datadir=./data/para
 vocabdir=./data/vocab
 
@@ -36,5 +36,5 @@ python expert_model.py \
       --label_smoothing=0.1 \
       --src_max_len=70 \
       --tgt_max_len=70 \
-      --num_gpus=8
+      --num_gpus=2
 
