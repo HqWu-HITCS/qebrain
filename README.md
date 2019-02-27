@@ -5,7 +5,7 @@ This repository is forked from https://github.com/lovecambi/qebrain, which is a 
 Since the implementation details, data preprocessing, and other possibilities, it is not guaranteed to reproduce the results in [WMT 2018 QE task](http://www.statmt.org/wmt18/quality-estimation-task.html#results) (testing).
 
 ## Requirements
-1. TensorFlow 1.12 `pip install tensorflow-gpu` (Noted that it should be run under CUDA9.0 and cudnn7.3.1 )
+1. TensorFlow 1.12 `pip install tensorflow-gpu` ( Noted that it should be run under CUDA9.0 and cudnn7.3.1 )
 2. OpenNMT-tf 1.15 `pip install OpenNMT-tf`
 We used the following OpenNMT-tf APIs, so the latest OpenNMT-tf may also work if they are not changed. OpenNMT-tf also claimed backward compatibility guarantees.
     * `encoders.self_attention_encoder.SelfAttentionEncoder`
@@ -17,7 +17,9 @@ We used the following OpenNMT-tf APIs, so the latest OpenNMT-tf may also work if
 
 ## Basic Usage
 1. Download the [parallel datasets](http://www.statmt.org/wmt18/translation-task.html#download) from WMT website.
-2. Preprocessing including tokenization, lowercasing, and vocabulary files.
+2. Preprocessing data:
+      Tokenization and lowercasing: using tool in moses  https://github.com/moses-smt/mosesdecoder
+      Buliding vocabulary files: running build_vocab.py 
 3. The parallel data should be put into foler `data/para` (four emtpty files for representative purpose), and the example vocab files are in folder `data/vocab`.
 4. Run `./expert_train.sh` to train bilingual expert model, and due to the large dataset, we provide the multi GPU implementation.
 5. Download the [QE dataset](https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-2619). An example dataset of sentence level De-En QE task has been downloaded and preprocessed in folder `data/qe`, including human features (If no human feature is prepared, set the argument `--use_hf=False`). 
