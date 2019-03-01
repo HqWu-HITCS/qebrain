@@ -22,6 +22,7 @@ We used the following OpenNMT-tf APIs, so the latest OpenNMT-tf may also work if
 2. Preprocessing data:
       
       tokenization and lowercasing by using tool in moses  https://github.com/moses-smt/mosesdecoder/tree/master/scripts/tokenizer; 
+      
       buliding vocabulary files by running build_vocab.py 
 3. The parallel data should be put into foler `data/para` (four emtpty files for representative purpose), and the example vocab files are in folder `data/vocab`.
 4. Run `./expert_train.sh` to train bilingual expert model, and due to the large dataset, we provide the multi GPU implementation.
