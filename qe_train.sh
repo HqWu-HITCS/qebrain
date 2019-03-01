@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=7
+export CUDA_VISIBLE_DEVICES=0
 datadir=./data/qe
 vocabdir=./data/vocab
 exp_modeldir=./saved_exp_model/best_BLEU  # or avg_best_BLEU if bilingual expert is trained with model averaging.
